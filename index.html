@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Radio Station</title>
+</head>
+
+<style>
+	#player{
+		width: 250px;
+		height: 300px;
+		transform: translate(-50%);
+		left: 50%;
+		position: absolute;
+		background-color: rgba(78, 30, 30, 0.356);
+		text-align: center;
+		border-radius: 70px;
+	}
+	#pic{
+		width: 50%;
+		margin: 20px;
+	}
+	#content{
+		background-color: rgba(3, 0, 5, 0.418);
+		margin: 14px;
+		border-radius: 40px;
+	}
+	#content img{
+		width: 20%;
+		border-radius: 90%;
+		margin: 40px;
+		border: 2px solid rgb(0, 0, 0);
+		box-shadow: 2px 4px rgb(233, 97, 97);
+	}
+	#content img:hover{
+		box-shadow: 4px 4px black;
+		cursor: pointer;
+	}
+	input[type="range" i] {
+		-webkit-appearance:none ;
+		height: 4px;
+		margin: 0%;
+		background-color: rgb(236, 195, 195);
+		border-radius: 40%;
+	}
+	input[type=range]::-webkit-slider-thumb{
+		-webkit-appearance:none ;
+		background: rgb(3, 19, 109);
+		height: 15px;
+		width: 15px;
+		border-radius:6px 17px 17px 6px ;
+	}
+	#color_button{
+		width: 200px;
+		transform: translate(-50%);
+		left: 50%;
+		position: absolute;
+		background-color: rgba(6, 6, 143, 0);
+		text-align: center;
+		border-radius:50%;
+		margin-top: 100px;
+		border-top: 2px dotted red;
+		
+	}
+
+	article button{
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		margin: 7px;
+		
+	}
+	#color1{
+		background-image: linear-gradient(to right , red , black , white , black , red);
+	}
+	#color2{
+		background-image: linear-gradient(to right , blue , black , red, black,blue);
+	}
+	#color3{
+		background-image: linear-gradient(to right , orange, yellow,black, orange,yellow);
+	}
+	#color4{
+		background-image: linear-gradient(to right ,white, black , black,black,white);
+	}
+	#color1:hover{
+		box-shadow: 4px 4px black;
+		cursor: pointer;
+	}
+	#color3:hover{
+		box-shadow: 4px 4px black;
+		cursor: pointer;
+	}
+	#color4:hover{
+		box-shadow: 4px 4px black;
+		cursor: pointer;
+	}
+	#color2:hover{
+		box-shadow: 4px 4px black;
+		cursor: pointer;
+	}
+	#link{
+		border-radius: 50%;
+		margin-top: 40px;
+	}
+	h4 ,h1, h3{
+		color: aliceblue;
+		font-family:cursive
+	}
+	#settime{
+		margin: -4px;
+		color: rgb(253, 0, 0);
+	
+	}
+	#setdate{
+		margin: 3px;
+		color: rgb(255, 255, 255);
+		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+	}
+	#audiotitle{
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		font-size:larger;
+		color: rgb(231, 48, 48);
+		transform: translate(0px ,-15px);
+		font-weight: lighter;
+		border: solid 1px rgba(255, 255, 255, 0.24);
+		border-radius: 150px 150px 50px 50px;
+		
+	}
+	footer{
+		margin-top: -1px;
+		color: blanchedalmond;
+		
+		
+	}
+	footer h5{
+		margin-bottom: 1px;
+		background-color: rgba(15, 2, 2, 0.534);
+		border-radius: 50%;
+		transform: translate(0px , -20px);
+	}
+	#rad{
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+</style>
+
+
+<body>
+	<main id="player">
+	<header>
+		<article>
+			<img name="slider" id="link" width="50%" height="50%" >
+	
+		</article>
+		
+		<article id="time">
+			<h1 id="settime">12:00</h1>
+		</article>
+		
+		<article id="date">
+			<p id="setdate">1-1-2023</p>
+		</article>
+		
+		
+		<article id="color_button">
+			<button id="color1"></button>
+			<button id="color2"></button>
+			<button id="color3"></button>
+			<button id="color4"></button>
+		</article>
+		<div id="content">
+		<article>
+			<h4 id="rad">Radio Station</h4>
+			<h4 id="audiotitle">Live Station</h4>
+			<audio id="audiofile" src="Kalimba.mp3"></audio>
+		</article>
+		<article>
+			<img id="back" src="back.jpg" alt=""/>
+			<h3>-  Volume  +</h3>
+			<input id="inputVolume" type="range">
+			<img id="play" src="play.jpg" alt=""/>
+			<h4>2x  Speed Sound  2x</h4>
+			<input id="inputSpeed" type="range">
+			<img id="next" src="next.jpg" alt=""/>
+			
+		</article>
+<footer> <h5>Live Radio Designed By Jihad </h5> </footer>
+	</div>
+	</header>
+</main>
+	
+	
+	
+	
+	
+	<script src="Color.js"></script>
+	<script src="volume.js"></script>
+	<script src="mus.js"></script>
+</body>
+</html>
